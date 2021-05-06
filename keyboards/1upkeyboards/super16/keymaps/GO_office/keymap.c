@@ -1,4 +1,4 @@
-#include "super16.h"
+#include QMK_KEYBOARD_H
 
 enum layers {
  base,
