@@ -3,8 +3,8 @@
 enum layers {
  base,
  zbrush,
- lr,
- maya
+ lightrm,
+ blender
 };
 
 enum custom_keycodes {
@@ -22,7 +22,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [base] = LAYOUT_ortho_4x4(
        TO(base), TG(zbrush), TG(maya), KC_DELETE,   //active ground, active zbrush, active maya, delete
-       TG(lr), LCTL(KC_C), LCTL(KC_V), KC_ENTER,    //ative lr, copy, paste, enter
+       TG(lr), LCTL(KC_C), LCTL(KC_V), KC_ENTER,    //active lr, copy, paste, enter
        KC_NO, KC_NO, KC_NO, LCTL(KC_S),             //save
        KC_NO, KC_NO, KC_NO, KC_NO                   //
     ),
@@ -32,13 +32,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        DAMSTAND_BRUSH, STAND_BRUSH, TRIMDYN_BRUSH, KC_NO,    //extra keys are empty
        HPOLISH_BRUSH, SPOLISH_BRUSH, SNAKEHK_BRUSH, KC_NO    //alt + key
     ),
-  [maya] = LAYOUT_ortho_4x4(
+  [blender] = LAYOUT_ortho_4x4(
        TO(base), TG(zbrush), TG(maya), KC_DELETE,   //active ground, active zbrush, active maya, delete
        LSFT(KC_I), LCTL(KC_D), KC_J, KC_G,          //Isolate, Duplicate, Snap, Repeat
        KC_5, KC_4, KC_KP_3, KC_KP_1,                //shaded, wirefram, smooth prv, no smooth prv
        KC_NO, KC_NO, LCTL(KC_S), LCTL(KC_G)         //na, na, save, Group
     ),
-  [lr] = LAYOUT_ortho_4x4(
+  [lightrm] = LAYOUT_ortho_4x4(
        TO(base), TG(zbrush), TG(maya), LCTL(KC_BSPC),  //active ground, active zbrush, active maya, del rejected
        KC_P, KC_X, KC_U, KC_NO,                        //pick, reject, unflag, na
        KC_1, KC_3, KC_5, KC_NO,                        //1 str, 3 str, 5 str, na
@@ -97,3 +97,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+
+/*
+SAVED KEYMAPS
+ [maya] = LAYOUT_ortho_4x4(
+       TO(base), TG(zbrush), TG(maya), KC_DELETE,   //active ground, active zbrush, active maya, delete
+       LSFT(KC_I), LCTL(KC_D), KC_J, KC_G,          //Isolate, Duplicate, Snap, Repeat
+       KC_5, KC_4, KC_KP_3, KC_KP_1,                //shaded, wirefram, smooth prv, no smooth prv
+       KC_NO, KC_NO, LCTL(KC_S), LCTL(KC_G)         //na, na, save, Group
+*/
