@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 /* base
 * ,---------------------------------------.
-* | BASE    | Zbrush  | blender |         |
+* | BASE    | zbrush  | blender |         |
 * |---------+---------+---------+---------|
 * | lightrm | copy    | paste   | ENTER   |
 * |---------+---------+---------+---------|
