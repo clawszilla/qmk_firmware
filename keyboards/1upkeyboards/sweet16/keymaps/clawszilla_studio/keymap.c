@@ -21,10 +21,10 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [base] = LAYOUT_ortho_4x4(
-       TO(base), TG(zbrush), TG(maya), KC_DELETE,   //active ground, active zbrush, active maya, delete
-       TG(lr), LCTL(KC_C), LCTL(KC_V), KC_ENTER,    //active lr, copy, paste, enter
-       KC_NO, KC_NO, KC_NO, LCTL(KC_S),             //save
-       KC_NO, KC_NO, KC_NO, KC_NO                   //
+       TO(base), TG(zbrush), TG(maya), KC_DELETE,        //base, zbrush, maya, DEL
+       TG(lightrm), LCTL(KC_C), LCTL(KC_V), KC_ENTER,    //lightrm, copy, paste, ENTER
+       KC_NO, KC_LSHIFT, KC_NO, KC_NO,                   //NA, SHIFT, NA, NA
+       KC_LCTRL, KC_LGUI, KC_LALT, KC_DELETE             //CTRL, WINDOWS, ALT, DEL
     ),
   [zbrush] = LAYOUT_ortho_4x4(
        TO(base), TG(zbrush), TG(maya), KC_DELETE,            //kept for switching layers
